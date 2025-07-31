@@ -16,5 +16,12 @@ void main()
   final List<dynamic> fruits = ['りんご','ごりら',moji];
   print(fruits);
 
+  //List,Set,Mapでは格納するデータ型を<>で囲って定義する
+  const Set<int> contryCode = {1,88,44};
+
+  final Map<String,int> students= {'佐藤':20,'田中太郎':100};
+  print(contryCode);
+  print(students);
+  print(students['佐藤']);
 
 }

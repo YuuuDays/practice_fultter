@@ -85,10 +85,14 @@ void main() {
   final nums = [1, 2, 3, 4, 5, 6];
 
   // ここに、偶数だけ出力するように filterAndPrint を呼び出してください
-  filterAndPrint(nums, (n) {
-    if (n % 2 == 0) {
-      return true;
-    }
-    return false;
-  });
+  filterAndPrint(nums, (n) => n % 2 == 0);
+
+  /*【問題6】mapと無名関数を使って、全ての数を2倍に変換せよ！
+  以下の numbers リストを map() を使って、全て「2倍された新しいリスト」に変換してください。
+  そのあと、そのリストの中身を1つずつ出力してね。
+  */
+  final numbersA = [1, 2, 3, 4];
+  final List<int> ansA= numbersA.map((n)=>n*2).toList();
+  print('問題6');
+  ansA.forEach((n)=>print(n));
 }

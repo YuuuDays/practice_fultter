@@ -95,4 +95,46 @@ void main() {
   final List<int> ansA= numbersA.map((n)=>n*2).toList();
   print('問題6');
   ansA.forEach((n)=>print(n));
+
+  /*
+  【問題7】where() + 無名関数で特定の条件だけ抽出
+  以下のリストから「文字数が4以上のもの」だけを抽出して、1つずつ出力してください。
+   */
+  print('問題7');
+  final words = ['cat', 'lion', 'dog', 'tiger', 'fox'];
+  // print(words.where((word) => word.length >= 4));  出力結果:(lion, tiger) <-タプルになっている。問題の1つずつ出力～に反している
+  //正解↓
+  final result = words.where((word) => word.length >= 4);
+  result.forEach((word) => print(word));
+  // または以下のようにシンプル
+  print('別会');
+  words.where((word) => word.length >= 4).forEach((word) => print(word));
+
+  /*
+   * iterableは「型」
+   *  | 型             | できること                        | 特徴                   |
+      | ------------- | ---------------------------      | -------------------- |
+      | `List<T>`     | 添字アクセスできる（`list[0]`）      | 完成したリスト              |
+      | `Iterable<T>` | `forEach` や `for-in` でループ可能 | 遅延評価（必要になるまで中身を作らない） |
+   */
+
+  // ほんへ
+  //nullを許容する変数かどうか
+  // final String? resultB = myFunc();
+  // 主なユースケースとしては後述する API 通信の返り値を受け取る変数やクラス内の変数などがあります。
+
+  // 修飾子
+  //var 変数に対する修飾子,何度でも代入可能
+  var  data = 0;
+  data = 15;
+  print(data);
+
+  // const 定数に対する修飾子、コンパイル時に代入_動的な値は入れる事が出来ない
+  const int data_2 = 20;
+  // data_2 = 100; 上書きは不可
+  // 以下のような動的なものは入れられない
+  // int myFunc_2(){return 100;}
+  // const int data_3 = myFunc_2();
+  print(data_2);
+
 }

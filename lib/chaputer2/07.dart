@@ -119,5 +119,23 @@ void main()
   }
   callFunc_X();
 
+  /*
+  * 名前付き変数
+  * */
+  // {}で囲むことで名前付き引数を受け取る関数を定義する
+
+  // 引数が必須の関数
+  String mySecondFunction({required int age})
+  {
+    return age.toString();
+  }
+
+  // 日キスが必須ではない関数
+  void myThirdFunction({int? age})
+  {
+    print(age);
+    print('Age migth be null');
+  }
+
 }
 

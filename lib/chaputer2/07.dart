@@ -2,6 +2,8 @@
 戻り値の型　関数名()
  */
 import 'dart:async';
+import './myClass.dart';
+
 //例
 void main()
 {
@@ -136,6 +138,16 @@ void main()
     print(age);
     print('Age migth be null');
   }
+
+  final MyClass myClass = MyClass(10, 'gee');
+  print('--- classテスト ---');
+  // 下記はゲッターとして機能する
+  //Dartでは「ゲッターやセッターをプロパティのように扱う」ことが言語仕様として組み込まれている
+  print(myClass.a); // <- 10
+
+  myClass.printValues();
+  print(MyClass.myInt);
+  print('-------------------');
 
 }
 

@@ -148,8 +148,5 @@ void main()
   myClass.printValues();
   print(MyClass.myInt);
   print('-------------------');
-
-
-
 }
 
